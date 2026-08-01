@@ -1,0 +1,218 @@
+:root {
+  --key1: #1C3B2A;
+  --key2: #4F7A5D;
+  --white: #FFFFFF;
+  --role: #FFFFFFD9;
+  --muted: #FFFFFFB3;
+  --font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--key1);
+  background: var(--white);
+}
+
+a { color: inherit; }
+
+/* ---------- Card (index) ---------- */
+.card {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 96px 24px;
+  background: var(--key1);
+}
+.ring {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  border: 1.5px solid #4F7A5D33;
+  top: -300px;
+  right: -320px;
+  pointer-events: none;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: cardIn 0.6s ease-out forwards;
+}
+@keyframes cardIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .inner { animation: none; opacity: 1; transform: none; }
+}
+.logoBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.logoText {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.32em;
+  color: var(--white);
+}
+.logoLine {
+  width: 36px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--key2);
+}
+.profileBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.name {
+  margin: 0;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--white);
+}
+.photo {
+  width: 176px;
+  height: 176px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.role {
+  margin: 0;
+  font-size: 20px;
+  color: var(--role);
+}
+.divider {
+  width: 64px;
+  height: 1px;
+  background: #4F7A5D55;
+}
+.claimBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.claimTitle {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+}
+.claimSub {
+  margin: 0;
+  font-size: 14px;
+  color: var(--role);
+}
+.ctaRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 15px 32px;
+  font-size: 16px;
+  background: var(--white);
+  color: var(--key1);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.footerRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footerDot { color: #FFFFFF66; font-size: 12px; }
+.footerLink {
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.footerLink:hover { color: var(--white); text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .card { padding: 64px 20px; }
+  .ctaRow { flex-direction: column; width: 100%; }
+  .ctaRow > * { width: 100%; }
+  .photo { width: 140px; height: 140px; }
+  .name { font-size: 38px; }
+}
+
+/* ---------- Legal pages ---------- */
+.legalPage {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+.legalBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--key2);
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+.legalBack:hover { text-decoration: underline; }
+.legalLogo {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.28em;
+  color: var(--key1);
+  margin-bottom: 48px;
+}
+.legalPage h1 {
+  font-size: 32px;
+  color: var(--key1);
+  margin: 0 0 32px;
+}
+.legalPage h2 {
+  font-size: 18px;
+  color: var(--key1);
+  margin: 40px 0 12px;
+}
+.legalPage p, .legalPage li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2A2A2A;
+}
+.legalPage a.inline { color: var(--key2); }
