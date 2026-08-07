@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kai Özcan – AutoMate Systems</title>
-<meta name="description" content="Kai Özcan, AutoMate Systems – mehr Marge im operativen Geschäft, ohne mehr Personal.">
+<title>AutoMate Systems – Mehr Marge im operativen Geschäft, ohne mehr Personal</title>
+<meta name="description" content="Automatisierte Anfrage- und Angebotsprozesse für den technischen Mittelstand. Mehr Aufträge aus Bestandskunden und Servicegeschäft, ohne zusätzliches Personal.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="card">
+
+  <section class="hero">
     <div class="ring" aria-hidden="true"></div>
     <div class="container">
       <div class="inner">
@@ -32,14 +33,94 @@
         <div class="ctaRow">
           <a class="btn" href="mailto:kai@automate-systems.de">E-Mail schreiben</a>
         </div>
+      </div>
+    </div>
+    <span class="scrollCue" aria-hidden="true"></span>
+  </section>
 
-        <div class="footerRow">
-          <a class="footerLink" href="impressum/">Impressum</a>
-          <span class="footerDot">·</span>
-          <a class="footerLink" href="datenschutz/">Datenschutz</a>
+  <section class="section section-light reveal">
+    <div class="sectionInner narrow">
+      <p class="eyebrow">Der Alltag im technischen Mittelstand</p>
+      <h2 class="sectionTitle">Wo im Tagesgeschäft Marge liegen bleibt</h2>
+      <p class="sectionIntro">Die Kapazität ist da. Trotzdem bleibt Umsatz auf der Strecke – meistens an denselben Stellen:</p>
+      <ol class="painList">
+        <li class="painItem">
+          <span class="painNum" aria-hidden="true">1</span>
+          <span class="painText">Angebote, die nie nachgefasst werden – weil dafür schlicht die Zeit fehlt</span>
+        </li>
+        <li class="painItem">
+          <span class="painNum" aria-hidden="true">2</span>
+          <span class="painText">Bestandskunden, die seit Monaten nichts mehr bestellt haben, ohne dass es jemandem auffällt</span>
+        </li>
+        <li class="painItem">
+          <span class="painNum" aria-hidden="true">3</span>
+          <span class="painText">Anfragen, die tagelang liegen bleiben, bis jemand Kapazität hat</span>
+        </li>
+        <li class="painItem">
+          <span class="painNum" aria-hidden="true">4</span>
+          <span class="painText">Wissen, das mit einem Mitarbeiter das Unternehmen verlässt</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-white reveal">
+    <div class="sectionInner">
+      <p class="eyebrow">Das Angebot</p>
+      <h2 class="sectionTitle">Was ich automatisiere</h2>
+      <p class="sectionIntro">Ich baue automatisierte Anfrage- und Angebotsprozesse, die genau an diesen Stellen ansetzen.</p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h3 class="pillarTitle">Automatisiertes Nachfassen</h3>
+          <p class="pillarText">Offene Angebote werden systematisch nachgefasst, ohne dass du selbst dran denken musst.</p>
         </div>
+        <div class="pillar">
+          <h3 class="pillarTitle">Bestandskunden-Reaktivierung</h3>
+          <p class="pillarText">Kunden mit Bestellpause werden automatisch erkannt und angesprochen.</p>
+        </div>
+        <div class="pillar">
+          <h3 class="pillarTitle">Schnellere Reaktionszeit</h3>
+          <p class="pillarText">Eingehende Anfragen werden strukturiert erfasst und schneller bearbeitet.</p>
+        </div>
+      </div>
+
+      <p class="aboutNote">Bevor ich AutoMate Systems gegründet habe, war ich selbst im Feldservice unterwegs und habe in einem Mittelstandsunternehmen gearbeitet – ich kenne die Prozesse aus erster Hand, nicht nur aus der Theorie.</p>
+
+      <p class="qualifier">Für Geschäftsführer im Maschinen- und Anlagenbau, in der Fertigung und Kunststoffverarbeitung mit 20–150 Mitarbeitern in Süddeutschland.</p>
+    </div>
+  </section>
+
+  <section class="closing reveal">
+    <div class="closingInner">
+      <h2 class="closingTitle">Lass uns sprechen</h2>
+      <p class="closingText">Schreib mir kurz, wo bei euch aktuell Marge liegen bleibt.</p>
+      <div class="ctaRow">
+        <a class="btn" href="mailto:kai@automate-systems.de">E-Mail schreiben</a>
+      </div>
+      <div class="siteFooter">
+        © 2026 Kai Özcan · <a href="impressum/">Impressum</a> · <a href="datenschutz/">Datenschutz</a>
       </div>
     </div>
   </section>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      els.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
 </body>
 </html>
