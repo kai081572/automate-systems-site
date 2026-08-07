@@ -270,6 +270,20 @@ a { color: inherit; }
   color: #2A2A2A;
   padding-top: 4px;
 }
+.painStat {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--key1);
+  font-weight: 600;
+  border-left: 2px solid var(--key2);
+  padding-left: 10px;
+}
+.painSource {
+  font-weight: 400;
+  color: #6A6A6A;
+}
 
 /* ---------- Pillars (offer) ---------- */
 .pillars {
