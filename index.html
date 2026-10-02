@@ -5,53 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AutoMate Systems · Recruiting ohne Personalvermittler</title>
 <meta name="description" content="Offene gewerbliche Stellen im Elektro-, Industrieservice- und Maschinenbau besetzen, ohne teure Personalvermittler.">
+<meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #f6f4ee;
+    --bg: #f4f4ef;
     --bg-raised: #ffffff;
-    --ink: #1d2620;
-    --ink-soft: #4c5850;
-    --line: #dcd8cc;
+    --ink: #20241f;
+    --ink-soft: #5b625b;
+    --line: #dddad1;
     --green: #1c3b2a;
     --green-deep: #142b1f;
-    --green-tint: #e7ece5;
+    --green-tint: #e9ede8;
     --rust: #b3541e;
     --rust-tint: #f3e3d4;
     color-scheme: light;
   }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg: #121814;
-      --bg-raised: #182019;
-      --ink: #ece8dd;
-      --ink-soft: #b7c0b6;
-      --line: #2c352c;
-      --green: #6fae86;
-      --green-deep: #0d1712;
-      --green-tint: #1c2921;
-      --rust: #e08a4f;
-      --rust-tint: #2c2019;
-      color-scheme: dark;
-    }
-    :root:not([data-theme="light"]) .btn-primary{color:#0d1712;}
-  }
-  :root[data-theme="dark"]{
-    --bg: #121814;
-    --bg-raised: #182019;
-    --ink: #ece8dd;
-    --ink-soft: #b7c0b6;
-    --line: #2c352c;
-    --green: #6fae86;
-    --green-deep: #0d1712;
-    --green-tint: #1c2921;
-    --rust: #e08a4f;
-    --rust-tint: #2c2019;
-    color-scheme: dark;
-  }
-  :root[data-theme="dark"] .btn-primary{color:#0d1712;}
 
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
@@ -103,11 +74,11 @@
   .hero{padding-block:64px 48px;}
   .hero-logo{height:34px;width:auto;margin-bottom:28px;}
   .hero h1{
-    font-size:clamp(2rem, 4.6vw, 3rem);
-    font-weight:800;
-    line-height:1.08;
+    font-size:clamp(2rem, 4.8vw, 3.1rem);
+    font-weight:700;
+    line-height:1.16;
     letter-spacing:-0.01em;
-    max-width:14ch;
+    max-width:34ch;
   }
   .hero .subhead{
     margin-top:20px;
@@ -133,15 +104,16 @@
     display:inline-flex;
     align-items:center;
     gap:8px;
-    padding:13px 22px;
-    border-radius:3px;
-    font-weight:700;
+    padding:13px 24px;
+    border-radius:8px;
+    font-weight:600;
     font-size:0.98rem;
     text-decoration:none;
     border:1px solid transparent;
   }
   .btn-primary{background:var(--green);color:#f6f4ee;}
-  .btn-ghost{border-color:var(--line);color:var(--ink);}
+  .btn-primary.btn-rust{background:var(--rust);color:#fbeee0;}
+  .btn-ghost{border-color:var(--line);color:var(--ink);background:var(--bg-raised);}
   .btn-ghost:hover{border-color:var(--green);}
   .contact-line{font-size:0.9rem;color:var(--ink-soft);}
 
@@ -190,7 +162,7 @@
   .cost-card{
     background:var(--bg-raised);
     border:1px solid var(--line);
-    border-radius:4px;
+    border-radius:8px;
     padding:22px;
   }
   .cost-card .cost-row{
@@ -322,14 +294,24 @@
   .cta-box{
     background:rgba(246,244,238,.06);
     border:1px solid rgba(246,244,238,.18);
-    border-radius:4px;
+    border-radius:8px;
     padding:22px;
   }
   .cta-box .row{display:flex;flex-direction:column;gap:4px;margin-bottom:16px;}
   .cta-box .row:last-of-type{margin-bottom:0;}
   .cta-box .k{font-size:0.72rem;letter-spacing:.08em;text-transform:uppercase;color:#8fa595;}
   .cta-box .v{font-size:1.02rem;font-weight:600;color:#f6f4ee;}
-  .cta-section .btn-primary{margin-top:18px;width:100%;justify-content:center;background:var(--rust);color:#fbeee0;}
+  .cta-section .btn-primary{
+    margin-top:18px;
+    width:100%;
+    justify-content:center;
+    text-align:center;
+    white-space:nowrap;
+    padding-block:11px;
+    font-size:0.9rem;
+    background:var(--rust);
+    color:#fbeee0;
+  }
   .cta-sub{margin-top:10px;text-align:center;font-size:0.78rem;color:#8fa595;}
 
   /* footer */
@@ -398,7 +380,7 @@
     <p class="subhead reveal hero-in" style="transition-delay:.14s">Offene Stellen bremsen Wachstum, Kapazität und Umsatz.</p>
     <p class="lede reveal hero-in" style="transition-delay:.2s">AutoMate Systems bringt geprüfte Fachkräfte aus Ihrer Region mit Ihrem Unternehmen zusammen, ohne klassische Personalvermittlung mit 20–30 % Jahresgehalt.</p>
     <div class="hero-cta reveal hero-in" style="transition-delay:.3s">
-      <a class="btn btn-primary" href="#kontakt">Kostenlosen Prozess-Check anfragen</a>
+      <a class="btn btn-primary btn-rust" href="#kontakt">Kostenlosen Potenzial-Check anfragen</a>
       <a class="btn btn-ghost" href="#ansatz">So funktioniert es</a>
     </div>
   </div>
@@ -527,7 +509,7 @@
         <div class="k">E-Mail</div>
         <div class="v">kai@automate-systems.de</div>
       </div>
-      <a class="btn btn-primary" id="kontakt" href="mailto:kai@automate-systems.de?subject=Prozess-Check%20Recruiting-Automatisierung">Kostenlosen Prozess-Check anfragen</a>
+      <a class="btn btn-primary" id="kontakt" href="mailto:kai@automate-systems.de?subject=Potenzial-Check%20Recruiting-Automatisierung">Kostenlosen Potenzial-Check anfragen</a>
       <div class="cta-sub">Unverbindlich · 20 Minuten</div>
     </div>
   </div>
