@@ -192,6 +192,17 @@ nav .btn{padding:9px 18px;font-size:14px;color:#fff}
 .sig span{display:block;font:400 15px "Source Sans 3",sans-serif;color:var(--muted)}
 @media(max-width:860px){.about{grid-template-columns:1fr;gap:24px}.portrait{width:132px;height:132px}}
 
+/* FAQ */
+.faq{margin-top:40px;display:grid;gap:12px;max-width:860px}
+details{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);transition:border-color .3s}
+details[open]{border-color:var(--green)}
+summary{list-style:none;cursor:pointer;padding:20px 54px 20px 22px;position:relative;font-family:Archivo,"Segoe UI",Arial,sans-serif}
+summary::-webkit-details-marker{display:none}
+summary h3{font-size:18px;display:inline}
+summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font:600 24px Archivo,sans-serif;color:var(--accent);transition:transform .25s var(--ease)}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{padding:0 22px 22px;color:var(--muted);font-size:17px;max-width:70ch}
+
 /* CTA */
 .cta-band{text-align:center;padding:104px 0}
 .cta-band h2{margin:0 auto;max-width:20ch}
@@ -216,6 +227,55 @@ footer a:hover{text-decoration:underline}
   .board-head .live i{animation:none}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://automate-systems.de/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Welche Daten brauchen Sie von uns, und was passiert damit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AutoMate Systems braucht von Ihnen drei Dinge: eine Beschreibung Ihrer Zielkunden, Ihr Angebot und, wenn alte Angebote oder Bestandskunden reaktiviert werden sollen, die zugehörigen Kundendaten. Aus diesen Angaben bauen wir Ihre Kampagnen: wen wir ansprechen, mit welchem Anlass und mit welchem Text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viel Aufwand entsteht für unseren Vertrieb?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ihr Vertrieb übernimmt nur die qualifizierten Chancen und fasst dort nach. Recherche, Ansprache und Vorqualifizierung liegen bei uns. Ihre Mitarbeiter führen das Gespräch, schreiben das Angebot und bleiben am Kunden dran."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Funktioniert das auch mit einem schlecht gepflegten CRM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, das System funktioniert auch mit einem lückenhaft gepflegten CRM. Uns reichen der Firmenname und ein Hinweis auf den früheren Vorgang, etwa ein altes Angebot oder der letzte Auftrag. Was fehlt, recherchieren wir neu: aktuelle Ansprechpartner, den heutigen Stand des Unternehmens und den Anlass für die Ansprache. Für neue Zielunternehmen brauchen wir Ihr CRM gar nicht."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie schnell sehen wir erste Ergebnisse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wie schnell erste Ergebnisse kommen, ist von Unternehmen zu Unternehmen unterschiedlich. Fest steht der Start: Ihre erste Kampagne geht 14 Tage nach dem Auftaktgespräch live. Wann daraus Gespräche werden, hängt von Zielgruppe, Angebot und der Länge Ihrer Verkaufszyklen ab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was unterscheidet das von einer Leadgenerierungs-Agentur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AutoMate Systems kommt aus dem Maschinen- und Anlagenbau, nicht aus dem Marketing. Gründer Kai Özcan hat selbst mehrere Jahre in der Branche gearbeitet. Deshalb ist jede Ansprache technisch korrekt, und Ihr Vertrieb bekommt vorqualifizierte Chancen mit Kontext statt Kontaktlisten."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body id="top">
 
@@ -228,6 +288,7 @@ footer a:hover{text-decoration:underline}
       <a href="#ablauf">Ablauf</a>
       <a href="#einstieg">Einstieg</a>
       <a href="#ueber-mich">Über mich</a>
+      <a href="#faq">FAQ</a>
       <a class="btn" href="https://calendly.com/kai-automate-systems/potentialanalyse" target="_blank" rel="noopener">Potentialanalyse buchen</a>
     </nav>
   </div>
@@ -479,6 +540,34 @@ footer a:hover{text-decoration:underline}
       <p class="rv">Ich habe selbst mehrere Jahre im Maschinen- und Anlagenbau gearbeitet. Ich weiß, warum ein Projekt verschoben wird, wie lange eine Investitionsentscheidung dauert und wie ein Techniker eine Mail liest.</p>
       <p class="rv">Deshalb ist jede Ansprache technisch korrekt und das System so gebaut, dass Ihr Vertrieb es im Alltag wirklich nutzt.</p>
       <p class="sig rv">Kai Özcan<span>Gründer, AutoMate Systems</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="problem" id="faq">
+  <div class="wrap">
+    <h2 class="rv">Häufige Fragen</h2>
+    <div class="faq">
+      <details class="rv" open>
+        <summary><h3>Welche Daten brauchen Sie von uns, und was passiert damit?</h3></summary>
+        <p>AutoMate Systems braucht von Ihnen drei Dinge: eine Beschreibung Ihrer Zielkunden, Ihr Angebot und, wenn alte Angebote oder Bestandskunden reaktiviert werden sollen, die zugehörigen Kundendaten. Aus diesen Angaben bauen wir Ihre Kampagnen: wen wir ansprechen, mit welchem Anlass und mit welchem Text.</p>
+      </details>
+      <details class="rv">
+        <summary><h3>Wie viel Aufwand entsteht für unseren Vertrieb?</h3></summary>
+        <p>Ihr Vertrieb übernimmt nur die qualifizierten Chancen und fasst dort nach. Recherche, Ansprache und Vorqualifizierung liegen bei uns. Ihre Mitarbeiter führen das Gespräch, schreiben das Angebot und bleiben am Kunden dran.</p>
+      </details>
+      <details class="rv">
+        <summary><h3>Funktioniert das auch mit einem schlecht gepflegten CRM?</h3></summary>
+        <p>Ja, das System funktioniert auch mit einem lückenhaft gepflegten CRM. Uns reichen der Firmenname und ein Hinweis auf den früheren Vorgang, etwa ein altes Angebot oder der letzte Auftrag. Was fehlt, recherchieren wir neu: aktuelle Ansprechpartner, den heutigen Stand des Unternehmens und den Anlass für die Ansprache. Für neue Zielunternehmen brauchen wir Ihr CRM gar nicht.</p>
+      </details>
+      <details class="rv">
+        <summary><h3>Wie schnell sehen wir erste Ergebnisse?</h3></summary>
+        <p>Wie schnell erste Ergebnisse kommen, ist von Unternehmen zu Unternehmen unterschiedlich. Fest steht der Start: Ihre erste Kampagne geht 14 Tage nach dem Auftaktgespräch live. Wann daraus Gespräche werden, hängt von Zielgruppe, Angebot und der Länge Ihrer Verkaufszyklen ab.</p>
+      </details>
+      <details class="rv">
+        <summary><h3>Was unterscheidet das von einer Leadgenerierungs-Agentur?</h3></summary>
+        <p>AutoMate Systems kommt aus dem Maschinen- und Anlagenbau, nicht aus dem Marketing. Gründer Kai Özcan hat selbst mehrere Jahre in der Branche gearbeitet. Deshalb ist jede Ansprache technisch korrekt, und Ihr Vertrieb bekommt vorqualifizierte Chancen mit Kontext statt Kontaktlisten.</p>
+      </details>
     </div>
   </div>
 </section>
